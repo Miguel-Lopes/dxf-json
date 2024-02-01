@@ -42,7 +42,6 @@ import { ArcEntityParser } from "./arc";
 import { ArcDimensionParser } from "./arc_dimension";
 import { AttDefEntityParser } from "./attdef";
 import { AttributeEntityParser } from "./attribute";
-import { BodyEntityParser } from "./body";
 import { CircleEntityParser } from "./circle";
 import { DimensionParser } from "./dimension";
 import { EllipseEntityParser } from "./ellipse";
@@ -72,9 +71,16 @@ import { ViewportParser } from "./viewport";
 import { WipeoutEntityParser } from "./wipeout";
 import { XLineEntityParser } from "./xline";
 import { CommonDxfEntity } from "./shared";
+import { Face3DEntityParser } from './face3D';
+import { SurfaceEntityParser } from './surface';
+import { BodyEntityParser } from './body';
 
 const Parsers = Object.fromEntries(
 	[
+        Solid3DEntityParser,
+        Face3DEntityParser,
+        SurfaceEntityParser,
+        BodyEntityParser,
 		ArcEntityParser,
     ArcDimensionParser,
 		AttDefEntityParser,

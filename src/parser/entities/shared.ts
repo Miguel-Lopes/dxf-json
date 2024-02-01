@@ -69,6 +69,8 @@ export interface CommonDxfEntity {
      * Note that group codes 102 for brackets are not included in the array.
      * */
     extensions?: Record<string, ScannerGroup[]>
+    ownerDictionaryHardId?: string | number | boolean;
+    ownerDictionarySoftId?: string | number | boolean;
 }
 
 export enum ShadowMode {

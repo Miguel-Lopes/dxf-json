@@ -7,16 +7,16 @@ import {
     PointParser,
 } from '../../shared/parserGenerator';
 import { CommonEntitySnippets } from '../shared';
-import { Solid3D } from './types';
+import { Surface } from './types';
 
-const DefaultSolid3DEntity = {
-    type: 'Solid3D',
-    subclassMarker: 'AcDb3dSolid',
+const DefaultSurfaceEntity = {
+    type: 'Surface',
+    subclassMarker: 'AcDbSurface',
     modelerFormatVersion: 1,
 };
 
 
-const Solid3DEntityParserSnippets: DXFParserSnippet[] = [
+const SurfaceEntityParserSnippets: DXFParserSnippet[] = [
     {
         code: 100,
         name: 'subclassMarker',
@@ -38,20 +38,25 @@ const Solid3DEntityParserSnippets: DXFParserSnippet[] = [
         parser: Identity,
     },
     {
-        code: 350,
-        name: "historyObjectHandle",
-        parser: Identity
+        code: 71,
+        name: 'UIsolines',
+        parser: Identity,
+    },
+    {
+        code: 72,
+        name: 'VIsolines',
+        parser: Identity,
     },
     ...CommonEntitySnippets,
 ];
 
-export class Solid3DEntityParser {
-    static ForEntityName = 'Facd3D';
-    private parser = createParser(Solid3DEntityParserSnippets, DefaultSolid3DEntity);
+export class SurfaceEntityParser {
+    static ForEntityName = 'Surface';
+    private parser = createParser(SurfaceEntityParserSnippets, DefaultSurfaceEntity);
 
     parseEntity(scanner: DxfArrayScanner, curr: ScannerGroup) {
         const entity = {} as any;
         this.parser(curr, scanner, entity);
-        return entity as Solid3D;
+        return entity as Surface;
     }
 }
