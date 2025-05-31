@@ -74,6 +74,8 @@ import { CommonDxfEntity } from "./shared";
 import { Face3DEntityParser } from './face3D';
 import { SurfaceEntityParser } from './surface';
 import { BodyEntityParser } from './body';
+import { Ole2FrameParser } from './ole2frame';
+import { SeqendEntityParser } from './seqend';
 
 const Parsers = Object.fromEntries(
 	[
@@ -114,6 +116,8 @@ const Parsers = Object.fromEntries(
 		ViewportParser,
 		WipeoutEntityParser,
 		XLineEntityParser,
+    Ole2FrameParser,
+    SeqendEntityParser
 	].map((parser) => [parser.ForEntityName, new parser()])
 );
 
