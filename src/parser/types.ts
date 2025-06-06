@@ -2,7 +2,7 @@ import type { DxfHeader } from '../types/dxfHeader';
 import type { DxfBlock } from './blocks/types';
 import type { CommonDxfEntity } from './entities/shared';
 import type { CommonDXFObject } from './objects';
-import type { BlockRecordTableEntry, DimStylesTableEntry, LayerTableEntry, LTypeTableEntry, StyleTableEntry, DxfTable, VPortTableEntry } from './tables';
+import type { BlockRecordTableEntry, DimStylesTableEntry, LayerTableEntry, LTypeTableEntry, StyleTableEntry, DxfTable, VPortTableEntry, AppIdTableEntry } from './tables';
 
 export interface ParsedDxf {
     header: DxfHeader;
@@ -15,6 +15,7 @@ export interface ParsedDxf {
         LAYER?: DxfTable<LayerTableEntry>;
         LTYPE?: DxfTable<LTypeTableEntry>;
         VPORT?: DxfTable<VPortTableEntry>;
+        APPID?: DxfTable<AppIdTableEntry>;
     };
     objects: {
         byName: Record<string, CommonDXFObject[]>;
