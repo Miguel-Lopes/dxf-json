@@ -12,6 +12,7 @@ import { parseLayerTable } from "./layer";
 import { parseLTypeTable } from "./ltype";
 import { parseStyleTable } from "./style";
 import { parseVPortTable } from "./vport";
+import {parseAppIdTable} from './appid';
 
 const TableParsers = {
 	BLOCK_RECORD: parseBlockRecordTable,
@@ -20,6 +21,7 @@ const TableParsers = {
 	LTYPE: parseLTypeTable,
 	STYLE: parseStyleTable,
 	VPORT: parseVPortTable,
+    APPID: parseAppIdTable
 };
 
 const CommonTableParserSnippets: DXFParserSnippet[] = [

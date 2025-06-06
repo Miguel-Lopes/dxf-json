@@ -79,10 +79,10 @@ import { SeqendEntityParser } from './seqend';
 
 const Parsers = Object.fromEntries(
 	[
-        Solid3DEntityParser,
-        Face3DEntityParser,
-        SurfaceEntityParser,
-        BodyEntityParser,
+    Solid3DEntityParser,
+    Face3DEntityParser,
+    SurfaceEntityParser,
+    BodyEntityParser,
 		ArcEntityParser,
     ArcDimensionParser,
 		AttDefEntityParser,
