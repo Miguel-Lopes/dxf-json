@@ -2,7 +2,8 @@ import type { DxfHeader } from '../types/dxfHeader';
 import type { DxfBlock } from './blocks/types';
 import type { CommonDxfEntity } from './entities/shared';
 import type { CommonDXFObject } from './objects';
-import type { BlockRecordTableEntry, DimStylesTableEntry, LayerTableEntry, LTypeTableEntry, StyleTableEntry, DxfTable, VPortTableEntry, AppIdTableEntry } from './tables';
+import type { BlockRecordTableEntry, DimStylesTableEntry, LayerTableEntry, LTypeTableEntry, StyleTableEntry, DxfTable, VPortTableEntry } from './tables';
+import { AppIdTableEntry } from './tables/appid'; //TODO find why cant import directly from ./tables
 
 export interface ParsedDxf {
     header: DxfHeader;
