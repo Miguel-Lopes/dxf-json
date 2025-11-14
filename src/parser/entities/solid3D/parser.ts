@@ -7,7 +7,7 @@ import {
     PointParser,
 } from '../../shared/parserGenerator';
 import { CommonEntitySnippets } from '../shared';
-import { Solid3D } from './types';
+import { Solid3d } from './types';
 
 const DefaultSolid3DEntity = {
     type: 'Solid3D',
@@ -16,7 +16,7 @@ const DefaultSolid3DEntity = {
 };
 
 
-const Solid3DEntityParserSnippets: DXFParserSnippet[] = [
+const Solid3dEntityParserSnippets: DXFParserSnippet[] = [
     {
         code: 100,
         name: 'subclassMarker',
@@ -45,13 +45,13 @@ const Solid3DEntityParserSnippets: DXFParserSnippet[] = [
     ...CommonEntitySnippets,
 ];
 
-export class Solid3DEntityParser {
+export class Solid3dEntityParser {
     static ForEntityName = 'Facd3D';
-    private parser = createParser(Solid3DEntityParserSnippets, DefaultSolid3DEntity);
+    private parser = createParser(Solid3dEntityParserSnippets, DefaultSolid3DEntity);
 
     parseEntity(scanner: DxfArrayScanner, curr: ScannerGroup) {
         const entity = {} as any;
         this.parser(curr, scanner, entity);
-        return entity as Solid3D;
+        return entity as Solid3d;
     }
 }
