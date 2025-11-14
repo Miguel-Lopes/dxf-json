@@ -1,6 +1,6 @@
 {
   "name": "dxf-json",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "perfect dxf parser",
   "type": "module",
   "main": "./dist/bundle.cjs",
