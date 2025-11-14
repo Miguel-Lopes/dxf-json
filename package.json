@@ -5,6 +5,7 @@
   "type": "module",
   "main": "./dist/bundle.cjs",
   "module": "./dist/bundle.mjs",
+  "prepare": "npm run build",
   "types": "./dist/types/index.d.ts",
   "exports": {
     "import": {
