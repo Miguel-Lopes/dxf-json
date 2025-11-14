@@ -5,7 +5,6 @@
   "type": "module",
   "main": "./dist/bundle.cjs",
   "module": "./dist/bundle.mjs",
-  "prepare": "npm run build",
   "types": "./dist/types/index.d.ts",
   "exports": {
     "import": {
@@ -18,12 +17,12 @@
     }
   },
   "scripts": {
+    "prepare": "npm run build",
     "build": "rimraf -rf ./dist && tsc --project tsconfig.build.json && rollup --config",
     "test": "vitest run --config ./vite.config.ts && npm run typetest",
     "test-dev": "vitest --config ./vite.config.ts --silent=false",
     "analyze": "depcruise src --include-only \".*(types|index|consts).ts\" -T dot | dot -Grankdir=TD -Gsplines=ortho -T svg > dependency-graph.svg",
     "new": "vite-node scripts/create-snippet.ts",
-    "typetest": "npm --workspace=integration-test run build",
     "print": "vite-node ./scripts/print.ts"
   },
   "repository": {
