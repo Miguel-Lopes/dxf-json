@@ -1,4 +1,4 @@
-import type DxfArrayScanner from '../../DxfArrayScanner';
+import type {DxfArrayScanner} from '../../DxfArrayScanner';
 import type { ScannerGroup } from '../../DxfArrayScanner';
 import { createParser, DXFParserSnippet, Identity, PointParser } from '../../shared/parserGenerator';
 import { CommonEntitySnippets } from '../shared';

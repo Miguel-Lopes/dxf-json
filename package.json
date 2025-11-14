@@ -17,7 +17,7 @@
     }
   },
   "scripts": {
-    "build": "rm -rf ./dist && tsc --project tsconfig.build.json && rollup --config",
+    "build": "rimraf -rf ./dist && tsc --project tsconfig.build.json && rollup --config",
     "test": "vitest run --config ./vite.config.ts && npm run typetest",
     "test-dev": "vitest --config ./vite.config.ts --silent=false",
     "analyze": "depcruise src --include-only \".*(types|index|consts).ts\" -T dot | dot -Grankdir=TD -Gsplines=ortho -T svg > dependency-graph.svg",
@@ -62,6 +62,7 @@
     "@types/readable-stream": "^4.0.10",
     "@types/three": "^0.160.0",
     "dependency-cruiser": "^17.0.0",
+    "rimraf": "^6.1.0",
     "rollup": "^4.9.6",
     "rollup-plugin-swc3": "^0.12.1",
     "typescript": "^5.3.3",
