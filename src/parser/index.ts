@@ -1,4 +1,5 @@
 export type * from "./types";
+export type { ParsedDxf } from "./types";
 export * from "./blocks";
 export * from "./entities";
 export * from "./header";

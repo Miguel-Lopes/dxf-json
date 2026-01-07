@@ -1,3 +1,4 @@
+export type { CommonDxfEntity } from "./shared";
 
 export * from "./arc";
 export * from './arc_dimension';
