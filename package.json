@@ -12,7 +12,7 @@
       "default": "./dist/bundle.mjs"
     },
     "require": {
-      "types": "./dist/types/index.d.ts",
+      "types": "./dist/index.d.ts",
       "default": "./dist/bundle.cjs"
     }
   },
