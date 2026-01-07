@@ -5,10 +5,10 @@
   "type": "module",
   "main": "./dist/bundle.cjs",
   "module": "./dist/bundle.mjs",
-  "types": "./dist/types/index.d.ts",
+  "types": "./dist/index.d.ts",
   "exports": {
     "import": {
-      "types": "./dist/types/index.d.ts",
+      "types": "./dist/index.d.ts",
       "default": "./dist/bundle.mjs"
     },
     "require": {
